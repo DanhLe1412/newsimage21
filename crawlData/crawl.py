@@ -14,13 +14,13 @@ def main():
     ArgHuffpost.add_argument("--sizeh", default=5000, type=int, help='Amount news will download from hufftingtonpost.com [Must be in range 0-200853]')
 
     ArgKsta.add_argument("--ksta", type=int, default=0, help="1 activate download. otherwise, choose 0 will not download")
-    ArgKsta.add_argument("--sizek", default=5133, type=int, help= "Amount News will download from ksta.de [The amount must be in range 0-5133]")
+    ArgKsta.add_argument("--sizek", default=5132, type=int, help= "Amount News will download from ksta.de [The amount must be in range 0-5133]")
     
     parser.add_argument('--dir', type=str, default="./", help="Directory will store dataset")
 
     args = parser.parse_args()
     
-    if args.sizek < 0 or args.sizek > 5133:
+    if args.sizek < 0 or args.sizek > 5132:
         parser.print_help()
         sys.exit()
 
