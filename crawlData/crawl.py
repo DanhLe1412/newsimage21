@@ -21,10 +21,12 @@ def main():
     args = parser.parse_args()
     
     if args.sizek < 0 or args.sizek > 5132:
+        print("size ksta out range")
         parser.print_help()
         sys.exit()
 
     if args.sizeh < 0 or args.sizeh > 200853:
+        print("size huffpost out range")
         parser.print_help()
         sys.exit()
     

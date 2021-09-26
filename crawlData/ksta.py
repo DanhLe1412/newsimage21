@@ -14,7 +14,7 @@ _ColArticle = 'article'
 
 def downloadEachImage(url, dirContainImg, articleID):
     imgResponse = requests.request('GET', url=url, headers={'User-Agent': 'Mozilla/5.0'})
-    imageName = url.split("/")[-1]
+    imageName = f"{articleID}.{url.split('/')[-1].split('.')[-1]}"
 
     if imgResponse.status_code != 200:
         print(f"connection error!! Can't download image {articleID} with statuscode: {imgResponse.status_code}")
